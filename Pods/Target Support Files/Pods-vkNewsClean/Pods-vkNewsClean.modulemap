@@ -1,0 +1,6 @@
+framework module Pods_vkNewsClean {
+  umbrella header "Pods-vkNewsClean-umbrella.h"
+
+  export *
+  module * { export * }
+}
