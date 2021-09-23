@@ -15,7 +15,7 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        view.backgroundColor = .white
     }
     @IBAction func signInTouch(_ sender: UIButton) {
         authService!.wakeUpSession()

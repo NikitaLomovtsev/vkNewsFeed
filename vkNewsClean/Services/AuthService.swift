@@ -23,6 +23,10 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
         return VKSdk.accessToken().accessToken
     }
     
+    var userId: String? {
+        return VKSdk.accessToken().userId
+    }
+    
     private let appId = "7955046"
     private let vkSdk: VKSdk
     
@@ -35,7 +39,7 @@ class AuthService: NSObject, VKSdkDelegate, VKSdkUIDelegate {
     }
     
     func wakeUpSession(){
-        let scope = ["offline"]
+        let scope = ["wall", "friends"]
         VKSdk.wakeUpSession(scope) {[delegate] state, error in
             switch state {
             case .initialized:
